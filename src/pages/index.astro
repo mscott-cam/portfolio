@@ -1,6 +1,7 @@
 ---
-import profileImage from "../../public/profile_image.jpg";
-import HomeMainSection from "../components/HomeMainSection.astro";
+// import profileImage from "../../public/profile_image.jpg";
+import profileImage from "../../public/profile_image.png";
+import copyIcon from "../../public/copy_icon.png";
 ---
 
 <html lang="en">
@@ -11,13 +12,39 @@ import HomeMainSection from "../components/HomeMainSection.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Hey there!</title>
   </head>
-  <body
-    class="flex flex-col lg:flex-row sm:flex-col lg:justify-center h-screen items-center bg-[#F5F4F5] text-[#37393A]"
-  >
-    <img
-      src={profileImage}
-      class="rounded-3xl opacity-80 w-72 lg:w-96 shadow-xl mt-12 lg:m-12"
-    />
-    <HomeMainSection />
+  <body class="h-screen m-4 bg-[#F5F4F5] text-[#37393A] font-mono">
+    <main class="">
+      <section class="grid gap-4">
+        <img src={profileImage} class="opacity-80" />
+        <!-- <img
+          src={profileImage}
+          class="rounded-3xl opacity-80 w-72 lg:w-96 shadow-xl mt-12 lg:m-12"
+        /> -->
+        <h1 class="text-4xl text-center">Hi, I'm Scott</h1>
+        <p class="">
+          A fullstack dev with heavy lean toward the frontend. I have 5 years
+          experience in many roles and industries. I love to make great
+          experiences for users, hopefully adding a bit of joy to a crazy world!
+        </p>
+      </section>
+      <section class="m-8">
+        <h1>Contact me</h1>
+        <div class="flex items-center h-10">
+          <span class="inline-block email">hello@mscottcameron.com</span>
+          <button class="copy-button">
+            <img src={copyIcon} class="h-10" />
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
+
+<script>
+  const button = document.querySelector(".copy-button");
+  button?.addEventListener("click", () => {
+    const copyContent = document.querySelector(".email")?.innerHTML || "";
+    console.log(">>>", copyContent);
+    navigator.clipboard.writeText(copyContent);
+  });
+</script>
