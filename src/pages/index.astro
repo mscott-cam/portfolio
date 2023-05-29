@@ -1,7 +1,5 @@
 ---
-// import profileImage from "../../public/profile_image.jpg";
 import profileImage from "../../public/profile_image.png";
-import copyIcon from "../../public/copy_icon.png";
 ---
 
 <html lang="en">
@@ -10,41 +8,21 @@ import copyIcon from "../../public/copy_icon.png";
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Hey there!</title>
+    <title>M. Scott Cameron</title>
   </head>
-  <body class="h-screen m-4 bg-[#F5F4F5] text-[#37393A] font-mono">
-    <main class="">
-      <section class="grid gap-4">
-        <img src={profileImage} class="opacity-80" />
-        <!-- <img
-          src={profileImage}
-          class="rounded-3xl opacity-80 w-72 lg:w-96 shadow-xl mt-12 lg:m-12"
-        /> -->
-        <h1 class="text-4xl text-center">Hi, I'm Scott</h1>
-        <p class="">
-          A fullstack dev with heavy lean toward the frontend. I have 5 years
-          experience in many roles and industries. I love to make great
-          experiences for users, hopefully adding a bit of joy to a crazy world!
-        </p>
-      </section>
-      <section class="m-8">
-        <h1>Contact me</h1>
-        <div class="flex items-center h-10">
-          <span class="inline-block email">hello@mscottcameron.com</span>
-          <button class="copy-button">
-            <img src={copyIcon} class="h-10" />
-          </button>
-        </div>
-      </section>
-    </main>
+  <body class="m-4 bg-[#FEFEFE] text-[#37393A] font-mono">
+    <header class="grid gap-8 place-items-center">
+      <h1 class="text-3xl place-self-start">M. Scott Cameron</h1>
+      <img src={profileImage} class="opacity-90 drop-shadow-2xl" />
+      <h1 class="text-4xl leading-relaxed">
+        I'm a<br /><span class="text-6xl">Fullstack Dev.</span>
+      </h1>
+      <p class="max-w-[65ch]">
+        ** with lean toward the frontend. I've been at it for 5 years, in many
+        roles and industries and I LOVE to make great digital experiences.
+        Please let me know if you have any questions or you'd like to work
+        together! Cheers.
+      </p>
+    </header>
   </body>
 </html>
-
-<script>
-  const button = document.querySelector(".copy-button");
-  button?.addEventListener("click", () => {
-    const copyContent = document.querySelector(".email")?.innerHTML || "";
-    console.log(">>>", copyContent);
-    navigator.clipboard.writeText(copyContent);
-  });
-</script>
