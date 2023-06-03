@@ -15,22 +15,25 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
     <title>M. Scott Cameron</title>
   </head>
   <!-- <body class="m-4 bg-[#FEFEFE] text-[#1e293b] font-mono"> -->
-  <body class="m-4 bg-gray-200 text-[#1e293b] font-mono">
-    <header class="grid gap-8 place-items-center max-w-full">
-      <h1 class="text-3xl place-self-start">M. Scott Cameron</h1>
-      <img src={profileImage} class="top-8 scale-90 max-w-full" />
-      <h1 class="text-4xl leading-relaxed">
+  <body class="m-4 md:m-0 bg-gray-200 text-[#1e293b] font-mono">
+    <header>
+      <h1 class="text-3xl place-self-start md:m-4">M. Scott Cameron</h1>
+      <img
+        src={profileImage}
+        class="top-8 scale-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem]"
+      />
+      <h1 class="text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end">
         I'm a<br /><span class="text-5xl">Fullstack Dev.</span>
       </h1>
-      <p class="max-w-[65ch] text-xl">
+      <p
+        class="md:max-w-[45ch] text-xl mx-2 md:row-start-3 md:col-span-2 md:place-self-center"
+      >
         ** with lean toward the frontend. I've been at it for 5 years, in many
         roles and industries and I LOVE to make great digital experiences.
         Please let me know if you have any questions or you'd like to work
         together. Cheers!
       </p>
-      <div
-        class="max-w-full w-full p-6 grid grid-cols-4 place-items-center gap-6"
-      >
+      <div class="button-group">
         <LinkedInButton />
         <GithubButton />
         <SendEmailButton />
@@ -39,3 +42,16 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
     </header>
   </body>
 </html>
+
+<style>
+  header {
+    @apply grid gap-8 place-items-center max-w-full
+      md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
+      lg:grid-cols-[1fr_3fr_1fr] lg:grid-rows-3;
+  }
+
+  .button-group {
+    @apply max-w-full w-full p-6 grid grid-cols-4 place-items-center gap-6
+      md:place-self-end md:col-span-2 md:grid-cols-1 md:place-items-end;
+  }
+</style>
