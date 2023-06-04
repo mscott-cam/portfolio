@@ -14,44 +14,51 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
     <meta name="generator" content={Astro.generator} />
     <title>M. Scott Cameron</title>
   </head>
-  <!-- <body class="m-4 bg-[#FEFEFE] text-[#1e293b] font-mono"> -->
-  <body class="m-4 md:m-0 bg-gray-200 text-[#1e293b] font-mono">
+  <body class="m-4 md:m-0 bg-neutral-300 text-[#1e293b] font-mono">
     <header>
       <h1 class="text-3xl place-self-start md:m-4">M. Scott Cameron</h1>
       <img
         src={profileImage}
-        class="top-8 scale-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem]"
+        class="top-8 scale-90 opacity-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem]"
       />
-      <h1 class="text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end">
-        I'm a<br /><span class="text-5xl">Fullstack Dev.</span>
+      <h1
+        class="text-4xl leading-relaxed mx-2 md:row-start-2 md:justify-self-end md:text-end"
+      >
+        I'm a<br /><span class="text-5xl place-self-center">Fullstack Dev.</span
+        >
       </h1>
       <p
-        class="md:max-w-[45ch] text-xl mx-6 md:row-start-3 md:col-span-2 md:place-self-center"
+        class="md:max-w-[45ch] text-lg mx-6 md:row-start-3 md:col-span-2 md:place-self-center"
       >
         ** with lean toward the frontend. I've been at it for 5 years, in many
-        roles and industries and I LOVE to make great digital experiences.
+        roles and industries and I enjoy to make great digital experiences.
         Please let me know if you have any questions or you'd like to work
         together. Cheers!
       </p>
+      <h1>Contact me:</h1>
       <div class="button-group">
         <LinkedInButton />
         <GithubButton />
         <SendEmailButton />
         <CopyEmailButton />
       </div>
+      <!-- <h1>Roles:</h1>
+      <div>
+        <
+      </div> -->
     </header>
   </body>
 </html>
 
 <style>
   header {
-    @apply relative grid gap-8 place-items-center max-w-full
+    @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
       lg:grid-cols-[1fr_3fr_1fr] lg:grid-rows-3;
   }
 
   .button-group {
-    @apply max-w-full grid grid-cols-4 place-items-center gap-6
-      md:absolute md:grid-cols-1 right-4 bottom-4 md:w-12 rounded-2xl;
+    @apply max-w-full bg-neutral-200 grid grid-cols-4 place-items-center gap-6 shadow-2xl p-4 rounded-2xl
+      md:absolute md:grid-cols-1 right-4 bottom-4 md:w-12 md:bg-transparent md:shadow-none;
   }
 </style>
