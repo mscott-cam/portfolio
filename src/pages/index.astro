@@ -1,5 +1,6 @@
 ---
 import profileImage from "../../public/profile_image.png";
+import iHeartMediaLogo from "../../public/iheart_logo.png";
 import LinkedInButton from "../components/LinkedInButton.astro";
 import GithubButton from "../components/GithubButton.astro";
 import SendEmailButton from "../components/SendEmailButton.astro";
@@ -28,7 +29,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         >
       </h1>
       <p
-        class="md:max-w-[45ch] text-lg mx-6 md:row-start-3 md:col-span-2 md:place-self-center"
+        class="md:max-w-[45ch] text-lg md:row-start-3 md:col-span-2 md:place-self-center bg-neutral-200 shadow-2xl rounded-2xl p-4"
       >
         ** with lean toward the frontend. I've been at it for 5 years, in many
         roles and industries and I enjoy to make great digital experiences.
@@ -42,10 +43,23 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         <SendEmailButton />
         <CopyEmailButton />
       </div>
-      <!-- <h1>Roles:</h1>
-      <div>
-        <
-      </div> -->
+      <h1>Roles:</h1>
+      <div
+        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+      >
+        <img src={iHeartMediaLogo} />
+        <h1 class="text-3xl text-center">iHeart Media</h1>
+        <p>Software Engineer</p>
+        <p>Feb 2018 - Dec 2021</p>
+        <div class="flex gap-2 flex-wrap">
+          <span class="tech-bubble">Typescript</span>
+          <span class="tech-bubble">React</span>
+          <span class="tech-bubble">Redux</span>
+          <span class="tech-bubble">styled-components</span>
+          <span class="tech-bubble">GraphQL</span>
+          <span class="tech-bubble">Node</span>
+        </div>
+      </div>
     </header>
   </body>
 </html>
@@ -60,5 +74,9 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
   .button-group {
     @apply max-w-full bg-neutral-200 grid grid-cols-4 place-items-center gap-6 shadow-2xl p-4 rounded-2xl
       md:absolute md:grid-cols-1 right-4 bottom-4 md:w-12 md:bg-transparent md:shadow-none;
+  }
+
+  .tech-bubble {
+    @apply p-1 px-2 rounded-xl bg-slate-300;
   }
 </style>
