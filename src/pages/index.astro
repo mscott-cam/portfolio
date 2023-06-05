@@ -1,5 +1,7 @@
 ---
 import profileImage from "../../public/profile_image.png";
+import floorfoundLogo from "../../public/floorfound_logo.png";
+import babylonLogo from "../../public/babylon_logo.png";
 import iHeartMediaLogo from "../../public/iheart_logo.png";
 import LinkedInButton from "../components/LinkedInButton.astro";
 import GithubButton from "../components/GithubButton.astro";
@@ -47,6 +49,39 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
       <div
         class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
       >
+        <img src={floorfoundLogo} class="scale-75 place-self-center" />
+        <h1 class="text-3xl text-center">FloorFound</h1>
+        <p class="text-sm text-center">Senior Software Engineer</p>
+        <p class="text-sm text-center">June 2022 - Apr 2023</p>
+        <div class="flex gap-2 flex-wrap mt-4">
+          <span class="tech-bubble">Typescript</span>
+          <span class="tech-bubble">React</span>
+          <span class="tech-bubble">Node</span>
+          <span class="tech-bubble">Next</span>
+          <span class="tech-bubble">GraphQL</span>
+          <span class="tech-bubble">Apollo</span>
+          <span class="tech-bubble">Prisma</span>
+          <span class="tech-bubble">Chakra-UI</span>
+        </div>
+      </div>
+      <div
+        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+      >
+        <img src={babylonLogo} class="place-self-center" />
+        <h1 class="text-3xl text-center">Babylon Health</h1>
+        <p class="text-sm text-center">Frontend Software Engineer</p>
+        <p class="text-sm text-center">Nov 2021 - June 2022</p>
+        <div class="flex gap-2 flex-wrap mt-4">
+          <span class="tech-bubble">Typescript</span>
+          <span class="tech-bubble">React Native</span>
+          <span class="tech-bubble">GraphQL</span>
+          <span class="tech-bubble">Apollo</span>
+          <span class="tech-bubble">Lottie Animations</span>
+        </div>
+      </div>
+      <div
+        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+      >
         <img src={iHeartMediaLogo} class="scale-75" />
         <h1 class="text-3xl text-center">iHeart Media</h1>
         <p class="text-sm text-center">Software Engineer</p>
@@ -54,10 +89,11 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         <div class="flex gap-2 flex-wrap mt-4">
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React</span>
-          <span class="tech-bubble">Redux</span>
-          <span class="tech-bubble">styled-components</span>
-          <span class="tech-bubble">GraphQL</span>
           <span class="tech-bubble">Node</span>
+          <span class="tech-bubble">GraphQL</span>
+          <span class="tech-bubble">React-Query</span>
+          <span class="tech-bubble">AWS-Lambda/Dynamo</span>
+          <span class="tech-bubble">styled-components</span>
         </div>
       </div>
     </header>
