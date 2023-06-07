@@ -7,6 +7,18 @@ import LinkedInButton from "../components/LinkedInButton.astro";
 import GithubButton from "../components/GithubButton.astro";
 import SendEmailButton from "../components/SendEmailButton.astro";
 import CopyEmailButton from "../components/CopyEmailButton.astro";
+import ReactIcon from "../components/ReactIcon.astro";
+import TypescriptIcon from "../components/TypescriptIcon.astro";
+import NodeIcon from "../components/NodeIcon.astro";
+import GraphqlIcon from "../components/GraphqlIcon.astro";
+import HtmlIcon from "../components/HtmlIcon.astro";
+import CssIcon from "../components/CssIcon.astro";
+import TailwindIcon from "../components/TailwindIcon.astro";
+import GitIcon from "../components/GitIcon.astro";
+import JestIcon from "../components/JestIcon.astro";
+import PrismaIcon from "../components/PrismaIcon.astro";
+import NextIcon from "../components/NextIcon.astro";
+import AstroIcon from "../components/AstroIcon.astro";
 ---
 
 <html lang="en">
@@ -49,7 +61,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
     <main class="grid gap-6 my-12">
       <h1 class="place-self-start">Roles:</h1>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
       >
         <img src={floorfoundLogo} class="place-self-center scale-75" />
         <h1 class="text-3xl text-center row-start-1">FloorFound</h1>
@@ -67,7 +79,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         </div>
       </div>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
       >
         <img src={babylonLogo} class="place-self-center scale-[0.6] -my-6" />
         <h1 class="text-3xl text-center row-start-1">Babylon Health</h1>
@@ -82,7 +94,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         </div>
       </div>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
       >
         <img src={iHeartMediaLogo} class="scale-[0.6] -my-6" />
         <h1 class="text-3xl text-center row-start-1">iHeart Media</h1>
@@ -99,6 +111,22 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         </div>
       </div>
     </main>
+    <footer>
+      <div class="grid grid-cols-3 gap-4 overflow-hidden w-full">
+        <ReactIcon />
+        <TypescriptIcon />
+        <NodeIcon />
+        <GraphqlIcon />
+        <HtmlIcon />
+        <CssIcon />
+        <TailwindIcon />
+        <GitIcon />
+        <JestIcon />
+        <PrismaIcon />
+        <NextIcon />
+        <AstroIcon />
+      </div>
+    </footer>
   </body>
 </html>
 
