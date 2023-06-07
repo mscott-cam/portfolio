@@ -17,9 +17,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
     <meta name="generator" content={Astro.generator} />
     <title>M. Scott Cameron</title>
   </head>
-  <body
-    class="m-4 md:m-0 bg-neutral-300 text-[#1e293b] font-mono divide-y-2 divide-[#1e293b]"
-  >
+  <body class="m-4 md:m-0 bg-neutral-300 text-[#1e293b] font-mono">
     <header>
       <h1 class="text-3xl place-self-start md:m-4">M. Scott Cameron</h1>
       <img
@@ -40,8 +38,6 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         Please let me know if you have any questions or you'd like to work
         together. Cheers!
       </p>
-    </header>
-    <main class="grid gap-6 py-12">
       <h1 class="place-self-start">Contact me:</h1>
       <div class="button-group">
         <LinkedInButton />
@@ -49,6 +45,8 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
         <SendEmailButton />
         <CopyEmailButton />
       </div>
+    </header>
+    <main class="grid gap-6 my-12">
       <h1 class="place-self-start">Roles:</h1>
       <div
         class="max-w-full bg-neutral-200 grid shadow-2xl p-4 rounded-2xl grid-cols-1 gap-2"
@@ -106,7 +104,7 @@ import CopyEmailButton from "../components/CopyEmailButton.astro";
 
 <style>
   header {
-    @apply relative grid gap-6 place-items-center max-w-full mb-8
+    @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
       lg:grid-cols-[1fr_3fr_1fr] lg:grid-rows-3;
   }
