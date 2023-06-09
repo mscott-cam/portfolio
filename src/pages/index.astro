@@ -29,7 +29,7 @@ import AstroIcon from "../components/AstroIcon.astro";
     <meta name="generator" content={Astro.generator} />
     <title>M. Scott Cameron</title>
   </head>
-  <body class="m-4 md:m-0 bg-neutral-300 text-[#1e293b] font-mono">
+  <body class="m-4 bg-neutral-300 text-[#1e293b] font-mono">
     <header>
       <h1 class="text-3xl place-self-start md:m-4">M. Scott Cameron</h1>
       <img
@@ -50,7 +50,11 @@ import AstroIcon from "../components/AstroIcon.astro";
         Please let me know if you have any questions or you'd like to work
         together. Cheers!
       </p>
-      <h1 class="place-self-start">Contact me:</h1>
+      <h1
+        class="place-self-start w-full pt-4 border-t-2 border-neutral-800 md:hidden"
+      >
+        Contact me:
+      </h1>
       <div class="button-group">
         <LinkedInButton />
         <GithubButton />
@@ -58,16 +62,29 @@ import AstroIcon from "../components/AstroIcon.astro";
         <CopyEmailButton />
       </div>
     </header>
-    <main class="grid gap-6 my-12">
-      <h1 class="place-self-start">Roles:</h1>
+    <section class="grid gap-6 my-12">
+      <h1 class="place-self-start w-full pt-4 border-t-2 border-neutral-800">
+        Roles:
+      </h1>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
       >
-        <img src={floorfoundLogo} class="place-self-center scale-75" />
-        <h1 class="text-3xl text-center row-start-1">FloorFound</h1>
-        <p class="text-sm text-center">Senior Software Engineer</p>
-        <p class="text-sm text-center">June 2022 - Apr 2023</p>
-        <div class="flex gap-2 flex-wrap mt-4">
+        <img
+          src={floorfoundLogo}
+          class="place-self-center scale-75 md:col-start-1 md:row-span-3 md:row-start-1"
+        />
+        <h1
+          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
+        >
+          FloorFound
+        </h1>
+        <div>
+          <p>Senior Software Engineer</p>
+          <p>June 2022 - Apr 2023</p>
+        </div>
+        <div
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+        >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React</span>
           <span class="tech-bubble">Node</span>
@@ -79,13 +96,24 @@ import AstroIcon from "../components/AstroIcon.astro";
         </div>
       </div>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
       >
-        <img src={babylonLogo} class="place-self-center scale-[0.6] -my-6" />
-        <h1 class="text-3xl text-center row-start-1">Babylon Health</h1>
-        <p class="text-sm text-center">Frontend Software Engineer</p>
-        <p class="text-sm text-center">Nov 2021 - June 2022</p>
-        <div class="flex gap-2 flex-wrap mt-4">
+        <img
+          src={babylonLogo}
+          class="place-self-center scale-[0.6] -my-6 md:col-start-1 md:row-span-3 md:row-start-1 md:scale-75"
+        />
+        <h1
+          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
+        >
+          Babylon Health
+        </h1>
+        <div>
+          <p>Frontend Software Engineer</p>
+          <p>Nov 2021 - June 2022</p>
+        </div>
+        <div
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+        >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React Native</span>
           <span class="tech-bubble">GraphQL</span>
@@ -94,13 +122,24 @@ import AstroIcon from "../components/AstroIcon.astro";
         </div>
       </div>
       <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2"
+        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
       >
-        <img src={iHeartMediaLogo} class="scale-[0.6] -my-6" />
-        <h1 class="text-3xl text-center row-start-1">iHeart Media</h1>
-        <p class="text-sm text-center">Software Engineer</p>
-        <p class="text-sm text-center">Feb 2018 - Dec 2021</p>
-        <div class="flex gap-2 flex-wrap mt-4">
+        <img
+          src={iHeartMediaLogo}
+          class="scale-[0.6] -my-6 md:col-start-1 md:row-span-3 md:row-start-1 md:place-self-center md:scale-75"
+        />
+        <h1
+          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
+        >
+          iHeart Media
+        </h1>
+        <div>
+          <p>Software Engineer</p>
+          <p>Feb 2018 - Dec 2021</p>
+        </div>
+        <div
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+        >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React</span>
           <span class="tech-bubble">Node</span>
@@ -110,7 +149,7 @@ import AstroIcon from "../components/AstroIcon.astro";
           <span class="tech-bubble">styled-components</span>
         </div>
       </div>
-    </main>
+    </section>
     <footer>
       <div class="grid grid-cols-3 gap-4 overflow-hidden w-full">
         <ReactIcon />
@@ -139,10 +178,10 @@ import AstroIcon from "../components/AstroIcon.astro";
 
   .button-group {
     @apply max-w-full grid grid-cols-4 place-items-center gap-6
-      md:absolute md:grid-cols-1 right-4 bottom-4 md:w-12 md:bg-transparent md:shadow-none;
+      md:fixed md:grid-cols-1 right-4 bottom-4 md:w-12 md:bg-transparent md:shadow-none;
   }
 
   .tech-bubble {
-    @apply p-1 px-2 rounded-xl bg-slate-300;
+    @apply p-1 px-2 rounded-xl bg-slate-300 h-fit;
   }
 </style>
