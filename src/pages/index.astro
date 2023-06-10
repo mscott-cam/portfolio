@@ -31,13 +31,15 @@ import AstroIcon from "../components/AstroIcon.astro";
   </head>
   <body class="m-4 bg-neutral-300 text-[#1e293b] font-mono">
     <header>
-      <h1 class="text-3xl place-self-start md:m-4">M. Scott Cameron</h1>
+      <h1 class="text-3xl place-self-start md:m-4 lg:col-span-2">
+        M. Scott Cameron
+      </h1>
       <img
         src={profileImage}
-        class="top-8 scale-90 opacity-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem]"
+        class="top-8 scale-90 opacity-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem] lg:mr-0"
       />
       <h1
-        class="text-4xl leading-relaxed mx-2 md:row-start-2 md:justify-self-end md:text-end"
+        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end md:max-w-[12ch] md:justify-self-end lg:col-start-2 lg:place-self-start lg:text-start"
       >
         I'm a<br /><span class="text-5xl place-self-center">Fullstack Dev.</span
         >
@@ -78,12 +80,12 @@ import AstroIcon from "../components/AstroIcon.astro";
         >
           FloorFound
         </h1>
-        <div>
+        <div class="text-center md:text-start">
           <p>Senior Software Engineer</p>
           <p>June 2022 - Apr 2023</p>
         </div>
         <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
         >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React</span>
@@ -107,12 +109,12 @@ import AstroIcon from "../components/AstroIcon.astro";
         >
           Babylon Health
         </h1>
-        <div>
+        <div class="text-center md:text-start">
           <p>Frontend Software Engineer</p>
           <p>Nov 2021 - June 2022</p>
         </div>
         <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
         >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React Native</span>
@@ -133,12 +135,12 @@ import AstroIcon from "../components/AstroIcon.astro";
         >
           iHeart Media
         </h1>
-        <div>
+        <div class="text-center md:text-start">
           <p>Software Engineer</p>
           <p>Feb 2018 - Dec 2021</p>
         </div>
         <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center"
+          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
         >
           <span class="tech-bubble">Typescript</span>
           <span class="tech-bubble">React</span>
@@ -151,7 +153,9 @@ import AstroIcon from "../components/AstroIcon.astro";
       </div>
     </section>
     <footer>
-      <div class="grid grid-cols-3 gap-4 overflow-hidden w-full">
+      <div
+        class="grid grid-cols-3 gap-4 overflow-hidden w-full md:grid-cols-4 md:mx-4 md:gap-8"
+      >
         <ReactIcon />
         <TypescriptIcon />
         <NodeIcon />
@@ -173,7 +177,7 @@ import AstroIcon from "../components/AstroIcon.astro";
   header {
     @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
-      lg:grid-cols-[1fr_3fr_1fr] lg:grid-rows-3;
+      lg:grid-cols-4 lg:grid-rows-3;
   }
 
   .button-group {
