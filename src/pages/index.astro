@@ -20,16 +20,19 @@ import ContactButtons from "../components/header/ContactButtons.astro";
       </h1>
       <img
         src={profileImage}
-        class="inline md:row-start-2 md:col-start-2 md:justify-self-start md:w-3/4 lg:w-2/3 xl:w-1/2"
+        class="inline md:row-start-2 md:col-start-2 md:justify-self-start md:w-3/4 lg:w-[90%] lg:row-span-2 max-w-[500px]"
       />
       <h1
-        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end md:max-w-[12ch] md:justify-self-end lg:max-w-[unset]"
+        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:max-w-sm md:text-end md:justify-self-end lg:col-start-1 lg:place-self-end xl:max-w-lg"
       >
-        I'm a<br /><span class="text-5xl place-self-center">Fullstack Dev.</span
+        I'm a<br />
+        <span
+          class="text-5xl place-self-center md:text-6xl lg:text-7xl xl:text-8xl"
+          >Fullstack Dev.</span
         >
       </h1>
       <p
-        class="md:max-w-[35ch] text-lg md:row-start-3 md:col-span-2 md:self-start m-4 lg:max-w-[60ch] lg:self-center"
+        class="md:max-w-[45ch] text-lg m-4 md:m-0 md:row-start-3 md:col-span-2 md:self-start lg:max-w-[36ch] lg:row-start-3 lg:col-start-1 lg:col-span-1 lg:justify-self-end xl:text-2xl"
       >
         ** with lean toward the frontend. I've been at it for 5 years, in many
         roles and industries and I enjoy to make great digital experiences.
@@ -46,7 +49,7 @@ import ContactButtons from "../components/header/ContactButtons.astro";
     header {
       @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_3fr_3fr]
-      /* lg:grid-rows-[1fr_3fr_4fr]; */;
+      lg:grid-rows-4;
     }
   </style>
 </html>
