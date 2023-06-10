@@ -20,27 +20,22 @@ import ContactButtons from "../components/header/ContactButtons.astro";
       </h1>
       <img
         src={profileImage}
-        class="top-8 scale-90 opacity-90 md:row-start-2 md:col-start-2 md:scale-75 md:mr-[7rem] lg:mr-0"
+        class="inline md:row-start-2 md:col-start-2 md:justify-self-start md:w-3/4 lg:w-2/3 xl:w-1/2"
       />
       <h1
-        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end md:max-w-[12ch] md:justify-self-end lg:col-start-2 lg:place-self-start lg:text-start"
+        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:text-end md:max-w-[12ch] md:justify-self-end lg:max-w-[unset]"
       >
         I'm a<br /><span class="text-5xl place-self-center">Fullstack Dev.</span
         >
       </h1>
       <p
-        class="md:max-w-[45ch] text-lg md:row-start-3 md:col-span-2 md:place-self-center m-4"
+        class="md:max-w-[35ch] text-lg md:row-start-3 md:col-span-2 md:self-start m-4 lg:max-w-[60ch] lg:self-center"
       >
         ** with lean toward the frontend. I've been at it for 5 years, in many
         roles and industries and I enjoy to make great digital experiences.
         Please let me know if you have any questions or you'd like to work
         together. Cheers!
       </p>
-      <h1
-        class="place-self-start w-full pt-4 border-t-2 border-neutral-800 md:hidden"
-      >
-        Contact me:
-      </h1>
       <ContactButtons />
     </header>
     <Roles />
@@ -50,8 +45,8 @@ import ContactButtons from "../components/header/ContactButtons.astro";
   <style>
     header {
       @apply relative grid gap-6 place-items-center max-w-full
-      md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
-      lg:grid-cols-4 lg:grid-rows-3;
+      md:h-screen md:grid-cols-2 md:grid-rows-[1fr_3fr_3fr]
+      /* lg:grid-rows-[1fr_3fr_4fr]; */;
     }
   </style>
 </html>
