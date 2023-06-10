@@ -1,0 +1,26 @@
+---
+const { logoSrc, companyName, roleName, timeSpan } = Astro.props;
+---
+
+<div
+  class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
+>
+  <img
+    src={logoSrc}
+    class="place-self-center scale-75 md:col-start-1 md:row-span-3 md:row-start-1"
+  />
+  <h1
+    class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
+  >
+    {companyName}
+  </h1>
+  <div class="text-center md:text-start">
+    <p>{roleName}</p>
+    <p>{timeSpan}</p>
+  </div>
+  <div
+    class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
+  >
+    <slot />
+  </div>
+</div>

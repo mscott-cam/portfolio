@@ -1,24 +1,8 @@
 ---
 import profileImage from "../../public/profile-image.png";
-import floorfoundLogo from "../../public/floorfound-logo.png";
-import babylonLogo from "../../public/babylon-logo.png";
-import iHeartMediaLogo from "../../public/iheartmedia-logo.png";
-import LinkedInButton from "../components/LinkedInButton.astro";
-import GithubButton from "../components/GithubButton.astro";
-import SendEmailButton from "../components/SendEmailButton.astro";
-import CopyEmailButton from "../components/CopyEmailButton.astro";
-import ReactIcon from "../components/ReactIcon.astro";
-import TypescriptIcon from "../components/TypescriptIcon.astro";
-import NodeIcon from "../components/NodeIcon.astro";
-import GraphqlIcon from "../components/GraphqlIcon.astro";
-import HtmlIcon from "../components/HtmlIcon.astro";
-import CssIcon from "../components/CssIcon.astro";
-import TailwindIcon from "../components/TailwindIcon.astro";
-import GitIcon from "../components/GitIcon.astro";
-import JestIcon from "../components/JestIcon.astro";
-import PrismaIcon from "../components/PrismaIcon.astro";
-import NextIcon from "../components/NextIcon.astro";
-import AstroIcon from "../components/AstroIcon.astro";
+import Roles from "../components/Roles.astro";
+import Footer from "../components/Footer.astro";
+import ContactButtons from "../components/header/ContactButtons.astro";
 ---
 
 <html lang="en">
@@ -57,135 +41,21 @@ import AstroIcon from "../components/AstroIcon.astro";
       >
         Contact me:
       </h1>
-      <div class="button-group">
-        <LinkedInButton />
-        <GithubButton />
-        <SendEmailButton />
-        <CopyEmailButton />
-      </div>
+      <ContactButtons />
     </header>
-    <section class="grid gap-6 my-12">
-      <h1 class="place-self-start w-full pt-4 border-t-2 border-neutral-800">
-        Roles:
-      </h1>
-      <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
-      >
-        <img
-          src={floorfoundLogo}
-          class="place-self-center scale-75 md:col-start-1 md:row-span-3 md:row-start-1"
-        />
-        <h1
-          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
-        >
-          FloorFound
-        </h1>
-        <div class="text-center md:text-start">
-          <p>Senior Software Engineer</p>
-          <p>June 2022 - Apr 2023</p>
-        </div>
-        <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
-        >
-          <span class="tech-bubble">Typescript</span>
-          <span class="tech-bubble">React</span>
-          <span class="tech-bubble">Node</span>
-          <span class="tech-bubble">Next</span>
-          <span class="tech-bubble">GraphQL</span>
-          <span class="tech-bubble">Apollo</span>
-          <span class="tech-bubble">Prisma</span>
-          <span class="tech-bubble">Chakra-UI</span>
-        </div>
-      </div>
-      <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
-      >
-        <img
-          src={babylonLogo}
-          class="place-self-center scale-[0.6] -my-6 md:col-start-1 md:row-span-3 md:row-start-1 md:scale-75"
-        />
-        <h1
-          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
-        >
-          Babylon Health
-        </h1>
-        <div class="text-center md:text-start">
-          <p>Frontend Software Engineer</p>
-          <p>Nov 2021 - June 2022</p>
-        </div>
-        <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
-        >
-          <span class="tech-bubble">Typescript</span>
-          <span class="tech-bubble">React Native</span>
-          <span class="tech-bubble">GraphQL</span>
-          <span class="tech-bubble">Apollo</span>
-          <span class="tech-bubble">Lottie Animations</span>
-        </div>
-      </div>
-      <div
-        class="max-w-full bg-neutral-200 grid shadow-md p-4 rounded-2xl grid-cols-1 gap-2 md:grid-cols-[1fr_3fr] md:grid-rows-[1fr_1fr_2fr]"
-      >
-        <img
-          src={iHeartMediaLogo}
-          class="scale-[0.6] -my-6 md:col-start-1 md:row-span-3 md:row-start-1 md:place-self-center md:scale-75"
-        />
-        <h1
-          class="text-3xl text-center row-start-1 md:col-start-2 md:self-end md:text-start"
-        >
-          iHeart Media
-        </h1>
-        <div class="text-center md:text-start">
-          <p>Software Engineer</p>
-          <p>Feb 2018 - Dec 2021</p>
-        </div>
-        <div
-          class="flex gap-2 flex-wrap mt-4 md:row-start-3 md:col-start-2 md:mt-0 place-self-center md:place-self-start"
-        >
-          <span class="tech-bubble">Typescript</span>
-          <span class="tech-bubble">React</span>
-          <span class="tech-bubble">Node</span>
-          <span class="tech-bubble">GraphQL</span>
-          <span class="tech-bubble">React-Query</span>
-          <span class="tech-bubble">AWS-Lambda/Dynamo</span>
-          <span class="tech-bubble">styled-components</span>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div
-        class="grid grid-cols-3 gap-4 overflow-hidden w-full md:grid-cols-4 md:mx-4 md:gap-8"
-      >
-        <ReactIcon />
-        <TypescriptIcon />
-        <NodeIcon />
-        <GraphqlIcon />
-        <HtmlIcon />
-        <CssIcon />
-        <TailwindIcon />
-        <GitIcon />
-        <JestIcon />
-        <PrismaIcon />
-        <NextIcon />
-        <AstroIcon />
-      </div>
-    </footer>
+    <Roles />
+    <Footer />
   </body>
-</html>
 
-<style>
-  header {
-    @apply relative grid gap-6 place-items-center max-w-full
+  <style>
+    header {
+      @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_2fr_1fr_3fr]
       lg:grid-cols-4 lg:grid-rows-3;
-  }
+    }
 
-  .button-group {
-    @apply max-w-full grid grid-cols-4 place-items-center gap-6
-      md:fixed md:grid-cols-1 right-4 bottom-4 md:w-12 md:bg-transparent md:shadow-none;
-  }
-
-  .tech-bubble {
-    @apply p-1 px-2 rounded-xl bg-slate-300 h-fit;
-  }
-</style>
+    .tech-bubble {
+      @apply p-1 px-2 rounded-xl bg-slate-300 h-fit;
+    }
+  </style>
+</html>

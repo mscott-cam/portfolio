@@ -1,0 +1,53 @@
+---
+import floorfoundLogo from "../../public/floorfound-logo.png";
+import babylonLogo from "../../public/babylon-logo.png";
+import iHeartMediaLogo from "../../public/iheartmedia-logo.png";
+import Role from "../components/Role.astro";
+---
+
+<section class="grid gap-6 my-12">
+  <h1 class="place-self-start w-full pt-4 border-t-2 border-neutral-800">
+    Roles:
+  </h1>
+  <Role
+    logoSrc={floorfoundLogo}
+    companyName="FloorFound"
+    roleName="Senior Software Engineer"
+    timeSpan="June 2022 - Apr 2023"
+  >
+    <span class="tech-bubble">Typescript</span>
+    <span class="tech-bubble">React</span>
+    <span class="tech-bubble">Node</span>
+    <span class="tech-bubble">Next</span>
+    <span class="tech-bubble">GraphQL</span>
+    <span class="tech-bubble">Apollo</span>
+    <span class="tech-bubble">Prisma</span>
+    <span class="tech-bubble">Chakra-UI</span>
+  </Role>
+  <Role
+    logoSrc={babylonLogo}
+    companyName="Babylon Health"
+    roleName="Frontend Software Engineer"
+    timeSpan="Nov 2021 - June 2022"
+  >
+    <span class="tech-bubble">Typescript</span>
+    <span class="tech-bubble">React Native</span>
+    <span class="tech-bubble">GraphQL</span>
+    <span class="tech-bubble">Apollo</span>
+    <span class="tech-bubble">Lottie Animations</span>
+  </Role>
+  <Role
+    logoSrc={iHeartMediaLogo}
+    companyName="iHeartMedia"
+    roleName="Software Engineer"
+    timeSpan="Feb 2018 - Dec 2021"
+  >
+    <span class="tech-bubble">Typescript</span>
+    <span class="tech-bubble">React</span>
+    <span class="tech-bubble">Node</span>
+    <span class="tech-bubble">GraphQL</span>
+    <span class="tech-bubble">React-Query</span>
+    <span class="tech-bubble">AWS-Lambda/Dynamo</span>
+    <span class="tech-bubble">styled-components</span>
+  </Role>
+</section>
