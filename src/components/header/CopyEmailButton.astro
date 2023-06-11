@@ -2,7 +2,7 @@
   class="inline-block relative copy-button w-16 bg-neutral-200 shadow-md p-3 rounded-xl hover:bg-neutral-300 group active:scale-90"
 >
   <p
-    class="hidden tooltip text-xl absolute right-20 bottom-1 bg-neutral-300 rounded-lg"
+    class="hidden tooltip text-xl absolute -right-4 bottom-20 md:right-20 md:bottom-1 bg-neutral-300 rounded-lg"
   >
     Email copied!
   </p>
@@ -31,12 +31,3 @@
     setTimeout(() => tooltip?.classList.add("hidden"), 1000);
   });
 </script>
-
-<style>
-  @media screen and (orientation: portrait) and (max-height: 700px) {
-    .tooltip {
-      bottom: 4rem;
-      left: 0;
-    }
-  }
-</style>
