@@ -56,5 +56,11 @@ import DownArrow from "../icons/DownArrow.astro";
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_3fr_3fr]
       lg:grid-rows-4;
     }
+
+    @media screen and (orientation: landscape) and (max-height: 700px) {
+      header {
+        height: unset;
+      }
+    }
   </style>
 </html>
