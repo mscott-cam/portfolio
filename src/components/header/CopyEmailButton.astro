@@ -1,7 +1,11 @@
 <button
   class="inline-block relative copy-button w-16 bg-neutral-200 shadow-md p-3 rounded-xl hover:bg-neutral-300 group active:scale-90"
 >
-  <p class="hidden tooltip text-xl absolute right-20 bottom-1">Email copied!</p>
+  <p
+    class="hidden tooltip text-xl absolute right-20 bottom-1 bg-neutral-300 rounded-lg"
+  >
+    Email copied!
+  </p>
   <svg
     width="100%"
     height="100%"
@@ -27,3 +31,12 @@
     setTimeout(() => tooltip?.classList.add("hidden"), 1000);
   });
 </script>
+
+<style>
+  @media screen and (orientation: portrait) and (max-height: 700px) {
+    .tooltip {
+      bottom: 4rem;
+      left: 0;
+    }
+  }
+</style>
