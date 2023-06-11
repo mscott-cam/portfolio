@@ -3,6 +3,7 @@ import profileImage from "../../public/profile-image.png";
 import Roles from "../components/Roles.astro";
 import Footer from "../components/Footer.astro";
 import ContactButtons from "../components/header/ContactButtons.astro";
+import DownArrow from "../icons/DownArrow.astro";
 ---
 
 <html lang="en">
@@ -40,6 +41,10 @@ import ContactButtons from "../components/header/ContactButtons.astro";
         together. Cheers!
       </p>
       <ContactButtons />
+      <div class="hidden md:grid self-end col-span-2 mb-8">
+        <h1 class="text-2xl">Roles</h1>
+        <DownArrow />
+      </div>
     </header>
     <Roles />
     <Footer />
