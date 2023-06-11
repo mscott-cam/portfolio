@@ -3,7 +3,11 @@ import floorfoundLogo from "../../public/floorfound-logo.png";
 import babylonLogo from "../../public/babylon-logo.png";
 import iHeartMediaLogo from "../../public/iheartmedia-logo.png";
 import thinkfulLogo from "../../public/thinkful-logo.png";
+import parkLogo from "../../public/park-logo.png";
+import tenOaksLogo from "../../public/ten-oaks-logo.png";
+import usmcLogo from "../../public/usmc-logo.png";
 import Role from "../components/Role.astro";
+import DownArrow from "../icons/DownArrow.astro";
 ---
 
 <section class="w-full grid gap-6 place-items-center my-12 md:mt-0 md:mb-8">
@@ -26,6 +30,7 @@ import Role from "../components/Role.astro";
     <span class="tech-bubble">Apollo</span>
     <span class="tech-bubble">Prisma</span>
     <span class="tech-bubble">Chakra-UI</span>
+    <span class="tech-bubble">Fully Remote</span>
   </Role>
   <Role
     logoSrc={babylonLogo}
@@ -38,6 +43,7 @@ import Role from "../components/Role.astro";
     <span class="tech-bubble">GraphQL</span>
     <span class="tech-bubble">Apollo</span>
     <span class="tech-bubble">Lottie Animations</span>
+    <span class="tech-bubble">Fully Remote</span>
   </Role>
   <Role
     logoSrc={iHeartMediaLogo}
@@ -52,6 +58,7 @@ import Role from "../components/Role.astro";
     <span class="tech-bubble">React-Query</span>
     <span class="tech-bubble">AWS-Lambda/Dynamo</span>
     <span class="tech-bubble">styled-components</span>
+    <span class="tech-bubble">San Antonio, TX Hybrid</span>
   </Role>
   <Role
     logoSrc={thinkfulLogo}
@@ -66,6 +73,38 @@ import Role from "../components/Role.astro";
     <span class="tech-bubble">Node</span>
     <span class="tech-bubble">React</span>
     <span class="tech-bubble">Redux</span>
+    <span class="tech-bubble">Fully Remote</span>
+  </Role>
+  <div class="grid place-items-center w-full max-w-4xl">
+    <p class="text-2xl">Non-technical Roles</p>
+    <DownArrow />
+  </div>
+  <Role
+    logoSrc={parkLogo}
+    companyName="The Park Community Church"
+    roleName="Operations Director"
+    timeSpan="Jan 2014 - Mar 2016"
+  >
+    <span class="tech-bubble">San Antonio, TX</span>
+  </Role>
+  <Role
+    logoSrc={tenOaksLogo}
+    companyName="Ten Oaks Storage"
+    roleName="Facility Manager"
+    timeSpan="Dec 2013 - Dec 2015"
+  >
+    <span class="tech-bubble">San Antonio, TX</span>
+  </Role>
+  <Role
+    logoSrc={usmcLogo}
+    companyName="U.S. Marines"
+    roleName="Sergent, Fire Support Man"
+    timeSpan="Sep 2005 - Apr - 2010"
+  >
+    <span class="tech-bubble">San Diego, CA</span>
+    <span class="tech-bubble">Lawton, OK</span>
+    <span class="tech-bubble">Okinawa, Japan</span>
+    <span class="tech-bubble">Jacksonville, NC</span>
   </Role>
 </section>
 
