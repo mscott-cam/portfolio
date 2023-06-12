@@ -1,8 +1,8 @@
 <button
-  class="group inline-block relative copy-button w-16 bg-neutral-200 shadow-md p-3 rounded-xl group active:scale-90 transition-colors hover:bg-neutral-300"
+  class="inline-block relative copy-button w-16 bg-neutral-200 shadow-md p-3 rounded-xl hover:bg-neutral-300 active:scale-90"
 >
   <p
-    class="opacity-0 text-xl absolute -right-4 bottom-20 md:right-20 md:bottom-1 bg-neutral-300 rounded-lg group-focus:animate-[quickShow_1s_ease-out]"
+    class="tooltip text-xl absolute -right-4 bottom-20 md:right-20 md:bottom-1 bg-neutral-300 rounded-lg opacity-0 show-hide"
   >
     Email copied!
   </p>
@@ -23,15 +23,17 @@
 </button>
 
 <style>
-  @keyframes quickShow {
-    from {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  .show-hide {
+    transition: opacity 200ms ease-in;
   }
 </style>
+
+<script>
+  const button = document.querySelector(".copy-button");
+  const tooltip = document.querySelector(".tooltip");
+  button?.addEventListener("click", () => {
+    navigator.clipboard.writeText("hello@mscottcameron.com");
+    tooltip?.classList.add("opacity-100");
+    setTimeout(() => tooltip?.classList.remove("opacity-100"), 1000);
+  });
+</script>
