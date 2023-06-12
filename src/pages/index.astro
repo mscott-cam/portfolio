@@ -21,10 +21,10 @@ import DownArrow from "../icons/DownArrow.astro";
       </h1>
       <img
         src={profileImage}
-        class="inline opacity-90 w-3/4 md:row-start-2 md:col-start-2 md:justify-self-start lg:w-[90%] lg:row-span-2 max-w-[500px]"
+        class="inline opacity-90 w-3/4 md:row-start-2 md:col-start-2 md:justify-self-start lg:w-[90%] lg:row-span-2 max-w-[500px] animate-[fadeIn_400ms_ease-in]"
       />
       <h1
-        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:max-w-sm md:text-end md:justify-self-end lg:col-start-1 lg:place-self-end xl:max-w-lg"
+        class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:max-w-sm md:text-end md:justify-self-end lg:col-start-1 lg:place-self-end xl:max-w-lg animate-[fadeIn_500ms_ease-in]"
       >
         I'm a<br />
         <span
@@ -33,7 +33,7 @@ import DownArrow from "../icons/DownArrow.astro";
         >
       </h1>
       <p
-        class="md:max-w-[45ch] text-lg m-4 md:m-0 md:row-start-3 md:col-span-2 md:self-start lg:max-w-[36ch] lg:row-start-3 lg:col-start-1 lg:col-span-1 lg:justify-self-end xl:text-2xl"
+        class="md:max-w-[45ch] text-lg m-4 md:m-0 md:row-start-3 md:col-span-2 md:self-start lg:max-w-[36ch] lg:row-start-3 lg:col-start-1 lg:col-span-1 lg:justify-self-end xl:text-2xl animate-[fadeIn_1s_ease-in]"
       >
         ** with lean toward the frontend. I've been at it for 5 years, in many
         roles and industries and I enjoy to make great digital experiences.
@@ -49,18 +49,27 @@ import DownArrow from "../icons/DownArrow.astro";
     <Roles />
     <!-- <Footer /> -->
   </body>
+</html>
 
-  <style>
-    header {
-      @apply relative grid gap-6 place-items-center max-w-full
+<style>
+  header {
+    @apply relative grid gap-6 place-items-center max-w-full
       md:h-screen md:grid-cols-2 md:grid-rows-[1fr_3fr_3fr]
       lg:grid-rows-4;
-    }
+  }
 
-    @media screen and (orientation: landscape) and (max-height: 700px) {
-      header {
-        height: unset;
-      }
+  @keyframes fadeIn {
+    from {
+      @apply opacity-0;
     }
-  </style>
-</html>
+    to {
+      @apply opacity-100;
+    }
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 700px) {
+    header {
+      height: unset;
+    }
+  }
+</style>

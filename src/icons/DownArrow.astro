@@ -1,13 +1,34 @@
 <svg
   width="4rem"
-  height="4rem"
+  height="5rem"
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  class="lucide lucide-arrow-down"
+  class="arrow"
   ><line x1="12" x2="12" y1="5" y2="19"></line><polyline
     points="19 12 12 19 5 12"></polyline></svg
 >
+
+<style>
+  .arrow {
+    height: calc(fit-content + 4rem);
+    animation: arrowBounce 1s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes arrowBounce {
+    from {
+      @apply pb-0;
+    }
+
+    50% {
+      @apply pb-2;
+    }
+
+    to {
+      @apply pb-0;
+    }
+  }
+</style>
