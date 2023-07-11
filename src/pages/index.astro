@@ -1,5 +1,4 @@
 ---
-import profileImage from "../../public/profile-image.png";
 import Roles from "../components/Roles.astro";
 // import Footer from "../components/Footer.astro";
 import ContactButtons from "../components/header/ContactButtons.astro";
@@ -19,10 +18,11 @@ import DownArrow from "../icons/DownArrow.astro";
       <h1 class="text-3xl place-self-start md:m-4 lg:col-span-2">
         M. Scott Cameron
       </h1>
-      <img
-        src={profileImage}
-        class="inline opacity-90 w-3/4 md:row-start-2 md:col-start-2 md:justify-self-start lg:w-[90%] lg:row-span-2 max-w-[500px] animate-[fadeIn_500ms_ease-in]"
-      />
+      <div
+        class="inline opacity-90 w-3/4 shadow-2xl rounded-full overflow-hidden md:row-start-2 md:col-start-2 md:justify-self-start lg:w-[90%] lg:row-span-2 max-w-[500px] animate-[fadeIn_500ms_ease-in] bg-[goldenrod]"
+      >
+        <img src="/profile-image.png" />
+      </div>
       <h1
         class="inline text-4xl leading-relaxed mx-2 md:row-start-2 md:max-w-sm md:text-end md:justify-self-end lg:col-start-1 lg:place-self-end xl:max-w-lg animate-[fadeIn_500ms_ease-in]"
       >
