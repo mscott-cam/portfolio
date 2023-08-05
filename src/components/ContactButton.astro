@@ -1,0 +1,8 @@
+---
+const { url } = Astro.props;
+export const styles = "inline-block w-16 p-2 group";
+---
+
+<a class={styles} href={url} target="_blank" rel="noopener noreferrer">
+  <slot />
+</a>
